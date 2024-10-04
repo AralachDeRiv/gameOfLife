@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Press+Start+2P&display=swap");
+@import "./reset";
+@import "./mixins";
+@import "./grid";
+@import "./playMenu";
+@import "./title";
+@import "./menu";
+@import "./displayMenuBtn";
+@import "./themeMenuContainer";
+
+body {
+  @include transition;
+  font-family: "Nunito Sans";
+  color: var(--text-color);
+}

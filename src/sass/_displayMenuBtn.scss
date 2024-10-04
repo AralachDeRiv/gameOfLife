@@ -1,0 +1,18 @@
+@import "./colors";
+
+.container-display-menu-btn {
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: $rainbow-gradient;
+  border-radius: 15px;
+  padding: 2px;
+
+  .icon-container {
+    background-color: var(--backgroud-interface);
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+  }
+}

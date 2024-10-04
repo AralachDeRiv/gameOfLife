@@ -1,0 +1,65 @@
+@import "./colors";
+
+.playMenu {
+  position: fixed;
+  right: 50%;
+  bottom: 25px;
+  transform: translateX(50%);
+  z-index: 999;
+
+  padding: 6px;
+  border-radius: 15px;
+  background-color: var(--backgroud-interface);
+  border: 1px solid var(--border-color-interface);
+  box-shadow: $light-shadow;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+
+  .range-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+
+    &::after {
+      position: absolute;
+      content: "speed";
+      top: -18px;
+      left: 5px;
+      z-index: -1;
+
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    input[type="range"] {
+      direction: rtl; // Pour renverser la direction
+      -webkit-appearance: none; // Supprimer l'apparence par défaut
+      width: 175px;
+      height: 5px;
+      background: $rainbow-gradient;
+      border-radius: 2px;
+      outline: none;
+
+      &::-moz-range-thumb,
+      &::-webkit-slider-thumb {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border-color-interface);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .icon-container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+}

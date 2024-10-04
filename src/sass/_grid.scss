@@ -1,0 +1,32 @@
+@import "./colors";
+
+.grid-container {
+  &.present-pattern {
+    cursor: cell;
+  }
+
+  background-color: var(--alife-cell-color);
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
+  grid-auto-rows: minmax(10px, 1fr);
+  gap: 1px;
+  overflow: hidden;
+
+  .cell {
+    width: 100%;
+    height: 100%;
+
+    &[data-alive="false"] {
+      background-color: var(--dead-cell-color);
+    }
+
+    &[data-alive="true"] {
+      background-color: var(
+        --alive-cell-color
+      ); // Couleur pour les cellules vivantes
+    }
+  }
+}
